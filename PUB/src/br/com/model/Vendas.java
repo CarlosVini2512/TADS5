@@ -8,6 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+// venda e cliente -> onetwone 1-1
+// venda e mesa -> maintwoone n-1
+
 @Entity
 public class Vendas {
 	@Id
