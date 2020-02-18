@@ -17,6 +17,7 @@ public class Vendas {
 	private double totalVenda;
 	private Mesa mesa;
 	private Cliente cliente;
+	LocalTime private hora
 	private List<ItensVendas>itensVendas;
 	
 	public long getId() {
@@ -54,5 +55,11 @@ public class Vendas {
 	}
 	public void setItemVenda(List<ItensVendas> itensVendas) {
 		this.itensVendas = itensVendas;
+	}
+	public LocalTime getHora() {
+		return hora;
+	}
+	public void setHora(LocalTime hora) {
+		this.hora = hora;
 	}
 }
