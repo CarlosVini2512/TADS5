@@ -1,27 +1,40 @@
 package br.com.model;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 
-// venda e cliente -> onetwone 1-1
-// venda e mesa -> maintwoone n-1
+// venda e cliente -> OnetoMany 1-1
+// venda e mesa -> ManytoMany n-1
 
 @Entity
 public class Vendas {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
 	private LocalDate data;
+	
 	private double totalVenda;
+	
+	@OneToOne
 	private Mesa mesa;
+	
+	@OneToOne
 	private Cliente cliente;
-	LocalTime private hora
+	
+	private LocalTime hora;
+	
+	@ManyToMany
 	private List<ItensVendas>itensVendas;
+	
 	
 	public long getId() {
 		return id;
