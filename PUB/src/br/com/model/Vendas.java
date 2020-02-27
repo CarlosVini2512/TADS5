@@ -69,7 +69,7 @@ public class Vendas {
 	public List<ItensVendas> getItensVendas() {
 		return itensVendas;
 	}
-	public void setItemVenda(List<ItensVendas> itensVendas) {
+	public void setItensVendas(List<ItensVendas> itensVendas) {
 		this.itensVendas = itensVendas;
 	}
 	public LocalTime getHora() {

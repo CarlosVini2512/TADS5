@@ -11,7 +11,7 @@ public class ItensVendas {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private int qto;
+	private int qtd;
 	
 	@ManyToOne
 	private Produto produto;
@@ -22,11 +22,11 @@ public class ItensVendas {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public int getQuantidade() {
-		return qto;
+	public int getQtd() {
+		return qtd;
 	}
-	public void setQuantidade(int qto) {
-		this.qto = qto;
+	public void setQtd(int qtd) {
+		this.qtd = qtd;
 	}
 	public Produto getProduto() {
 		return produto;
