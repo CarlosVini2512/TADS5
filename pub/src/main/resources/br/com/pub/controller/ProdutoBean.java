@@ -27,18 +27,14 @@ public class ProdutoBean implements Serializable {
 		this.produto = produto;
 	}
 	
-	private String limparDados() {
+	private String deletarDados() {
 		produto = new Produto();
 		return "";		
 	}
 	
 	public String addProduto(){
 		produtoDAO.novo(produto);
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Salvo com sucesso"));
 		
-		FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
-		limparDados();
-		return "";
 	}
 
 	
