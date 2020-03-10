@@ -13,7 +13,7 @@ import br.com.pub.model.Produto;
 
 @ManagedBean(name="produtoBean")
 @SessionScoped
-public class ProdutoController implements Serializable {
+public class ProdutoBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	Produto produto = new Produto();
